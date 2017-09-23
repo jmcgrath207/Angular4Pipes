@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filter'
+  name: 'filter',
+  pure: false // makes the pipe reculate evertime there is a data change *warning could cause preform issues*
 })
 export class FilterPipe implements PipeTransform {
 
